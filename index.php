@@ -8,6 +8,9 @@
     <div class="wrapper">
       <section class="form signup">
         <form class="" action="#" enctype="multipart/form-data">
+          <div class="error-text">
+            
+          </div>
           <div class="field image">
             <label for="">Upload profile picture</label>
             <input type="file" name="image" value="" placeholder="" required>

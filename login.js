@@ -1,4 +1,4 @@
-const form = document.querySelector(".signup form"),
+const form = document.querySelector(".login form"),
 continueBtn = form.querySelector(".button input");
 errorText = form.querySelector(".error-text");
 
@@ -9,7 +9,7 @@ form.onsubmit = (e)=> {
 continueBtn.onclick = ()=> {
   // AJAX
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "signup.php", true);
+  xhr.open("POST", "login-config.php", true);
   xhr.onload = ()=> {
     if(xhr.readyState === XMLHttpRequest.DONE) {
       //console.log(xhr.status);
@@ -17,7 +17,7 @@ continueBtn.onclick = ()=> {
         //console.log(xhr.status);
         // The content of signup.php displayed without reloading
         let data = xhr.response;
-        console.log(xhr.response);
+        console.log(data);
         if(data == "cool"){
 
           location.href = "prechat.php";
@@ -25,6 +25,7 @@ continueBtn.onclick = ()=> {
           errorText.textContent = data;
           errorText.style.display = "block";
         }
+
       }
     }
   }
