@@ -1,3 +1,13 @@
+<?php
+	session_start();
+	if (isset($_SESSION['message'])){
+	echo $_SESSION['message'];
+	unset ($_SESSION['message']);
+	}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,7 +19,7 @@
       <section class="form signup">
         <form class="" action="#" enctype="multipart/form-data">
           <div class="error-text">
-            
+
           </div>
           <div class="field image">
             <label for="">Upload profile picture</label>

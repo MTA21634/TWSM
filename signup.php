@@ -25,7 +25,7 @@
             $time = time(); //time used to assign a unique id to all images, even if the names are the same
             $new_img_name = $time.$img_name;
 
-            if(move_uploaded_file($tmp_name, "/images".$new_img_name)){
+            if(move_uploaded_file($tmp_name, "profile_pictures/".$new_img_name)){
               $random_id = rand(time(), 10000);
 
               $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, username, password, img)
