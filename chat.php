@@ -9,12 +9,25 @@
 
 	$uquery=mysqli_query($conn,"SELECT * FROM `users` WHERE unique_id='".$_SESSION['unique_id']."'");
 	$urow=mysqli_fetch_assoc($uquery);
+
+
+	              $fetchVideos = mysqli_query($conn, "SELECT * FROM users ORDER BY unique_id DESC");
+	              while($row = mysqli_fetch_assoc($fetchVideos)){
+
+
+	                $username = $row['username'];
+
+	                echo $username;
+	              }
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Chatroom: </title>
-<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 <table id="chat_room" align="center">
@@ -33,11 +46,11 @@
 			<tr>
 				<td>
 				<div id="result" style="overflow-y:scroll; height:300px; width: 605px;"></div>
-				<form class="form">
+				<form class="#">
 					<!--<input type="text" id="msg">--><br/>
 					<textarea id="msg" rows="4" cols="85"></textarea><br/>
 					<input type="hidden" value="<?php echo $row['chat_room_id']; ?>" id="id">
-					<button type="button" id="send_msg" class="button button2">Send</button>
+					<button type="button" id="send_msg" class="#">Send</button>
 				</form>
 				</td>
 			</tr>
