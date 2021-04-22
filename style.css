@@ -3,6 +3,15 @@
    src: url(FredokaOne-Regular.ttf);
 }
 
+html {
+	background-color: #9AF98D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 div {
   font-family: myFont;
   font-size: 20px;
@@ -78,6 +87,10 @@ input[type=button] {
   cursor: pointer;
 }
 
+input[type=button]:hover {
+  background-color: #079732;
+}
+
 input[type=submit] {
   font-family: myFont;
   width: 40%;
@@ -89,11 +102,8 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
 }
-input[type=submit]:hover {
-  background-color: #079732;
-}
 
-input[type=button]:hover {
+input[type=submit]:hover {
   background-color: #079732;
 }
 
@@ -107,14 +117,26 @@ input[type=button]:hover {
     float: left;
 }
 
-html {
-	background-color: #9AF98D;
+#small_button_last{
+	width: 15%;
+	margin-top: 50px;
+    float: left;
 }
 
-* {
-  box-sizing: border-box;
+.chat_button{
+	font-family: myFont;
+	width: 35px; 
+	height: 35px; 
+	padding:0;
+	float: right;
+	border: 1px solid #dedede;
+    border-radius: 5px;
+    background-color: #ffffff;
+  cursor: pointer;
 }
-
+.chat_button:hover{
+	background: #ddd;
+}
 
 .column {
   float: left;
@@ -161,7 +183,7 @@ th {
 .texts {
   width: 75%;
   float: left;
-  border: 5px solid white;
+  background-color: #cdfcc6;
 }
 
 #message{
@@ -171,15 +193,17 @@ th {
 
 .container_messages {
   border: 2px solid #dedede;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 5px;
   margin: 10px 0;
+  text-align: left;
 }
 
 .dark {
   border-color: #ccc;
   background-color: #ddd;
+  text-align: right;
 }
 
 .container_messages img {

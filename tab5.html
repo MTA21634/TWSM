@@ -7,8 +7,9 @@
 </head>
 
 <body>
+
   <div class="tab_four">
-  <img src="icon.png" id="small_icon">
+  <img src="img/icon.png" id="small_icon">
     <header class="header">
     <strong> iChat </strong>
   </header>
@@ -28,22 +29,27 @@
   <h1>The cat chatroom</h1>
 
   <div class="container_messages">
-  	<img src="profile.png" style="width:100%;">
-  	<p>Hello. How are you today?</p>
+  	<img src="img/profile.png" style="width:100%;">
+  	<p>Do you like cats?</p>
   </div>
 
 	<div class="container_messages dark">
-  		<img src="profile.png" class="right" style="width:100%;">
-  		<p>Hey! I'm fine. Thanks for asking!</p>
+  		<img src="img/profile.png" class="right" style="width:100%;">
+  		<p>Yes! They are wonderful</p>
 	</div>
 
 	<form action="/action.php">
   		<input type="text" id="message" placeholder="Write a message...">
-  	</form>
+  		<button type="button" class ="chat_button">
+    		<img src="img/send.png" />
+		</button>
+		<button type="button" class ="chat_button">
+    		<img src="img/emoji.png" />
+		</button>
   </div>
 	
 <form action="/action.php">  
-	<input type="button" id="small_button_back" value="Exit the chat">
+	<input type="button" id="small_button_last" value="Exit the chat">
  </form>
 
 
