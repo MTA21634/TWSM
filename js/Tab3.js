@@ -3,11 +3,10 @@ $(function() {
 
 	$('img#choice_icon').on('mouseover', function() {
 		$(this).animate({
-				backgroundColor: "rgb( 220, 20, 20 )",
+			  	color: 'green',
 		      	height: '270px',
-		      	width: '270px',
+		    	width: '270px',
 		    });
-		$(this).css("cursor", "pointer");
 	});
 
 	$('img#choice_icon').on('mouseout', function() {
