@@ -18,12 +18,12 @@ $(function() {
 		$(this).css("color", "black");
 	});
 
-	$('#join_button').click(function() 
+	$('#join_button').click(function()
 	{
 		var selected_number = $('.selected').size();
 		if (selected_number > 0)
 		{
-			document.location.href = 'tab5.html';
+			document.location.href = 'chat.php';
 		}
 		else
 		{
@@ -32,6 +32,6 @@ $(function() {
 	});
 
 	$('#small_button_back').click(function() {
-		document.location.href = 'tab2.html';
+		document.location.href = 'tab2.php';
 	});
 });

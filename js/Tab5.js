@@ -33,6 +33,6 @@ $(function() {
     };
 
     $('#small_button_last').click(function() {
-		document.location.href = 'tab4.html';
+		document.location.href = 'tab4.php';
 	});
 });

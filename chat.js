@@ -1,3 +1,4 @@
+const chatBox = document.querySelector("#result")
 $(document).keypress(function(e){ //using keyboard enter key
 	displayResult();
 	/* Send Message	*/
@@ -18,6 +19,7 @@ $(document).keypress(function(e){ //using keyboard enter key
 					success: function(){
 						displayResult();
 						$('#msg').val(''); //clears the textarea after submit
+						scrollToBottom();
 					}
 				});
 			}
@@ -49,6 +51,7 @@ $(document).ready(function(){ //using send button
 					success: function(){
 						displayResult();
 						$('#msg').val(''); //clears the textarea after submit
+						scrollToBottom();
 					}
 				});
 			}
@@ -68,6 +71,11 @@ $(document).ready(function(){ //using send button
 			},
 			success: function(response){
 				$('#result').html(response);
+				scrollToBottom();
 			}
 		});
+	}
+
+	function scrollToBottom() {
+		chatBox.scrollTop = chatBox.scrollHeight;
 	}

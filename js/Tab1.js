@@ -3,8 +3,8 @@ $(function() {
 	$('#user_entry').hide().delay(1500).fadeIn(1500);
 
 	$('#log_in').click(function() {
-		var username = document.getElementById('fname');
-		var password = document.getElementById('pwd');
+		var username = document.getElementById('username');
+		var password = document.getElementById('password');
 
 		if (username.value != "" && password.value != "")
 		{
