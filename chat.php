@@ -77,7 +77,7 @@
 
 	 <button onclick="location.href='<?php echo $output; ?>'" id="small_button_last" class="log-out">Log out</button>
 
-<span id="smile-emoji">&#128512;</span>
+<span id="smile-emoji" hidden>&#128512;</span>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="chat.js"></script>

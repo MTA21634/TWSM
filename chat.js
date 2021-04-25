@@ -1,7 +1,6 @@
 const chatBox = document.querySelector("#result")
 $(document).keypress(function(e){ //using keyboard enter key
 	displayResult();
-	/* Send Message	*/
 
 		if(e.which === 13){
 				if($('#msg').val() == ""){
@@ -11,7 +10,7 @@ $(document).keypress(function(e){ //using keyboard enter key
 				$id = $('#id').val();
 				$.ajax({
 					type: "POST",
-					url: "send_message.php",
+					url: "send.php",
 					data: {
 						msg: $msg,
 						id: $id,
@@ -23,18 +22,13 @@ $(document).keypress(function(e){ //using keyboard enter key
 					}
 				});
 			}
-
-			/* $("form").submit();
-			 alert('You press enter key!'); */
 		}
 	}
 );
 
 
-$(document).ready(function(){ //using send button
+$(document).ready(function(){ //using the send button
 	displayResult();
-	/* Send Message	*/
-
 		$('#send_msg').on('click', function(){
 			if($('#msg').val() == ""){
 				alert('Please write message first');
@@ -43,7 +37,7 @@ $(document).ready(function(){ //using send button
 				$id = $('#id').val();
 				$.ajax({
 					type: "POST",
-					url: "send_message.php",
+					url: "send.php",
 					data: {
 						msg: $msg,
 						id: $id,
@@ -56,13 +50,12 @@ $(document).ready(function(){ //using send button
 				});
 			}
 		});
-	/* END */
 	});
 
 	function displayResult(){
 		$id = $('#id').val();
 		$.ajax({
-			url: 'send_message.php',
+			url: 'send.php',
 			type: 'POST',
 			async: false,
 			data:{

@@ -39,7 +39,7 @@
                   echo "cool";
                 }
               }else{
-                echo "error innit";
+                echo "error";
               }
             }
           }else {
@@ -51,8 +51,8 @@
         }
 
       }
-    }else { //if username is a number
-      echo "Username and password has to be at least 5 characters long.";
+    }else { //if username is less than 5 characters
+      echo "Username and password has to be at least 6 characters long.";
     }
   } else {
     echo "All input fields are required";
