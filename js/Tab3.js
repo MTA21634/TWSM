@@ -1,29 +1,14 @@
 $(function() {
-	$('.row').hide().fadeIn(1500);
+	$('.tab_three').hide().fadeIn(700);
+	$('.create_chat').hide().delay(700).fadeIn(700);
 
-	$('img#choice_icon').on('mouseover', function() {
-		$(this).animate({
-			  	color: 'green',
-		      	height: '270px',
-		    	width: '270px',
-		    });
-	});
 
-	$('img#choice_icon').on('mouseout', function() {
-		$(this).animate({
-		      height: '200px',
-		      width: '200px',
-		    });
-	});
-
-	$('img#choice_icon').on('click', function() {
-		var page = $(this).next().attr('id');
-		document.location.href = page + '.php';
-	});
-
-	$('li').on('mouseover click', function() {
-    	$(this).removeClass('nohover').addClass('hover');
-  	});
+	$( document ).tooltip({
+      	position: {
+      		my: "center top",
+        	at: "center bottom+5",
+      	}
+    });
 
 	$('#join_now').click(function() {
 		document.location.href = 'tab4.php';
