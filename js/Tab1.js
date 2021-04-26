@@ -1,6 +1,6 @@
 $(function() {
-	$('main').hide().fadeIn(1500);
-	$('#user_entry').hide().delay(1500).fadeIn(1500);
+	$('main').hide().fadeIn(700);
+	$('#user_entry').hide().delay(700).fadeIn(700);
 
 	$('#log_in').click(function() {
 		var username = document.getElementById('fname');
@@ -12,7 +12,21 @@ $(function() {
 		}
 		else
 		{
-			$('#warning').text("Please, enter a valid username and a password.").addClass('warning');
+			var options = {};
+			$('#warning').text("Please, enter a valid username and a password.").addClass('warning').effect("shake", options, 500, callback);
 		}
 	});
+
+	$( document ).tooltip({
+      	position: {
+      		my: "center top",
+        	at: "center bottom+5",
+      	}
+    });
+
+	function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn(700);
+      }, 1000 );
+    };
 });

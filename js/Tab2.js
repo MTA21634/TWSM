@@ -3,7 +3,6 @@ $(function() {
 
 	$('img#choice_icon').on('mouseover', function() {
 		$(this).animate({
-				backgroundColor: "rgb( 220, 20, 20 )",
 		      	height: '270px',
 		      	width: '270px',
 		    });
@@ -22,9 +21,9 @@ $(function() {
 		document.location.href = page + '.html';
 	});
 
-	$('li').on('mouseover click', function() {
-    	$(this).removeClass('nohover').addClass('hover');
-  	});
+	// $('li').on('mouseover click', function() {
+ //    	$(this).removeClass('nohover').addClass('hover');
+ //  	});
 
 	$('#join_now').click(function() {
 		document.location.href = 'tab4.html';

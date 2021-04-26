@@ -1,3 +1,14 @@
+.ui-tooltip{
+  font-size: 10pt;
+  padding: 1px 1px;
+  /*max-width: 400px;*/
+  color: black;
+  font-family: myFont;
+  border-radius: 20px;
+  box-shadow: 0 0 7px black;
+}
+/*.ui-tooltip*/
+
 @font-face {
    font-family: myFont;
    src: url(FredokaOne-Regular.ttf);
@@ -6,6 +17,7 @@
 html {
 	background-color: #9AF98D;
 }
+
 
 * {
   box-sizing: border-box;
@@ -19,6 +31,7 @@ div{
   padding: 20px;
   text-align: center;
 }
+
 
 #small_icon{
 	width: 4.5%;
