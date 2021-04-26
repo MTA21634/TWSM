@@ -9,8 +9,12 @@ if(!empty($username) && !empty($password)) {
                       AND password = '{$password}'");
   if(mysqli_num_rows($sql) > 0) {
     $row = mysqli_fetch_assoc($sql);
-    $_SESSION['unique_id'] = $row['unique_id'];
-    echo "cool";
+    $status = "Active";
+    $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id = {$row['unique_id']}");
+    if($sql2){
+      $_SESSION['unique_id'] = $row['unique_id'];
+      echo "cool";
+    }
 
   }else {//if the inputed data is not matching with the data in the database
     echo "Username or password is incorrect.";

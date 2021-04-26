@@ -20,7 +20,7 @@ continueBtn.onclick = ()=> {
         console.log(xhr.response);
         if(data == "cool"){
 
-          location.href = "prechat.php";
+          location.href = "tab2.php";
         }else{
           errorText.textContent = data;
           errorText.style.display = "block";

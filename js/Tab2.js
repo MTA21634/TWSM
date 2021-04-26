@@ -18,7 +18,7 @@ $(function() {
 
 	$('img#choice_icon').on('click', function() {
 		var page = $(this).next().attr('id');
-		document.location.href = page + '.html';
+		document.location.href = page + '.php';
 	});
 
 	// $('li').on('mouseover click', function() {
@@ -26,10 +26,10 @@ $(function() {
  //  	});
 
 	$('#join_now').click(function() {
-		document.location.href = 'tab4.html';
+		document.location.href = 'tab4.php';
 	});
 
 	$('#create_now').click(function() {
-		document.location.href = 'tab3.html';
+		document.location.href = 'tab3.php';
 	});
 });

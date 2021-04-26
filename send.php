@@ -15,9 +15,11 @@
 		$query=mysqli_query($conn,"select * from `chat` left join `users` on users.unique_id=chat.user_id where chat_room_id='$id' order by chat_date asc") or die(mysqli_error());
 		while($row=mysqli_fetch_array($query)){
 	?>
-		<div>
-			<?php echo $row['chat_date']; ?><br>
-		  <img src="profile_pictures/<?php echo $row['img'];?>" width="50" height="50"></img><?php echo $row['username']; ?>: <?php echo $row['chat_msg']; ?><br>
+	<?php
+
+	?>
+		<div class="container_messages">
+		  <img src="profile_pictures/<?php echo $row['img'];?>"></img><?php echo $row['username']; ?>: <?php echo $row['chat_msg']; ?><br>
 		</div>
 		<br>
 	<?php

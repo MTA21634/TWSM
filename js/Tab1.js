@@ -1,10 +1,10 @@
 $(function() {
-	$('main').hide().fadeIn(700);
-	$('#user_entry').hide().delay(700).fadeIn(700);
+	$('main').hide().fadeIn(1500);
+	$('#user_entry').hide().delay(1500).fadeIn(1500);
 
 	$('#log_in').click(function() {
-		var username = document.getElementById('fname');
-		var password = document.getElementById('pwd');
+		var username = document.getElementById('username');
+		var password = document.getElementById('password');
 
 		if (username.value != "" && password.value != "")
 		{
@@ -12,21 +12,7 @@ $(function() {
 		}
 		else
 		{
-			var options = {};
-			$('#warning').text("Please, enter a valid username and a password.").addClass('warning').effect("shake", options, 500, callback);
+			$('#warning').text("Please, enter a valid username and a password.").addClass('warning');
 		}
 	});
-
-	$( document ).tooltip({
-      	position: {
-      		my: "center top",
-        	at: "center bottom+5",
-      	}
-    });
-
-	function callback() {
-      setTimeout(function() {
-        $( "#effect" ).removeAttr( "style" ).hide().fadeIn(700);
-      }, 1000 );
-    };
 });

@@ -6,7 +6,7 @@
 
   if(!empty($username) && !empty($password)) {
     //checking if username is valid
-    if(is_string($username)) { //if username is a string
+    if(strlen($username)>5 && strlen($password)>5) { //username requirement
       //checking if username already exists
       $sql = mysqli_query($conn, "SELECT username FROM users WHERE username = '{$username}' ");
       if(mysqli_num_rows($sql) > 0) { //if username already exists
@@ -26,10 +26,11 @@
             $new_img_name = $time.$img_name;
 
             if(move_uploaded_file($tmp_name, "profile_pictures/".$new_img_name)){
+              $status = "Active";
               $random_id = rand(time(), 10000);
 
-              $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, username, password, img)
-                                            VALUES ({$random_id}, '{$username}', '{$password}', '{$new_img_name}')");
+              $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, username, password, img, status)
+                                            VALUES ({$random_id}, '{$username}', '{$password}', '{$new_img_name}', '{$status}')");
               if($sql2) {
                 $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE username = '{$username}'");
                 if(mysqli_num_rows($sql3) > 0){
@@ -38,7 +39,7 @@
                   echo "cool";
                 }
               }else{
-                echo "error innit";
+                echo "error";
               }
             }
           }else {
@@ -50,8 +51,8 @@
         }
 
       }
-    }else { //if username is a number
-      echo "$username - Is invalid. Username can only contain strings.";
+    }else { //if username is less than 5 characters
+      echo "Username and password has to be at least 6 characters long.";
     }
   } else {
     echo "All input fields are required";

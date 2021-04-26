@@ -24,7 +24,7 @@ html {
 }
 
 
-div{
+div {
   font-family: myFont;
   font-size: 20px;
   border-radius: 5px;
@@ -41,27 +41,9 @@ div{
     left: 20px;
 }
 
-.small{
-  height: 10px;
-  width: 10px;
-}
-
-.selected {
-  background-color: #c5e1a5; 
-}
-
-.active {
-  background-color: red; 
-}
-
-#warning{
-  margin: 8px 220px;
-  color: red;
-}
-
 #choice_icon{
 	width: 30%;
-  height: auto;
+  	height: auto;
 }
 
 #profile{
@@ -95,6 +77,8 @@ input[type=text], select{
   box-sizing: border-box;
 }
 
+
+
 input[type=password], select{
 	font-family: myFont;
   width: 40%;
@@ -112,7 +96,7 @@ input[type=button] {
   background-color: #09B83E;
   color: white;
   padding: 14px 20px;
-  margin: auto;
+  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -124,11 +108,11 @@ input[type=button]:hover {
 
 input[type=submit] {
   font-family: myFont;
-  margin: auto;
   width: 40%;
   background-color: #09B83E;
   color: white;
   padding: 14px 20px;
+  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -139,12 +123,7 @@ input[type=submit]:hover {
 }
 
 #small_button{
-  margin-right: 220px;
-  width: 40%;
-}
-
-#join_button{
-  margin: 8px 220px;
+	margin-right: 180px;
 }
 
 #small_button_back{
@@ -155,14 +134,18 @@ input[type=submit]:hover {
 
 #small_button_last{
 	width: 15%;
-	margin-top: 50px;
+	margin-top: 0px;
+  margin-bottom: 0px;
     float: left;
 }
 
+.users-list {
+  width: 100%;
+}
 .chat_button{
 	font-family: myFont;
-	width: 35px; 
-	height: 35px; 
+	width: 35px;
+	height: 35px;
 	padding:0;
 	float: right;
 	border: 1px solid #dedede;
@@ -192,7 +175,6 @@ table {
   font-family: myFont;
   border-collapse: collapse;
   width: 60%;
-  margin: 10px 90px;
   position: relative;
   left: 220px;
 }
@@ -223,16 +205,54 @@ th {
   background-color: #cdfcc6;
 }
 
+.log-out{
+  font-family: myFont;
+  width: 40%;
+  background-color: #09B83E;
+  color: white;
+  padding: 14px 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.log-out:hover{
+  background-color: #079732;
+}
+
+.log-out a{
+  text-decoration: none;
+  color: #fff;
+}
+
 #message{
 	width: 100%;
 	border-color: #ccc;
+}
+
+#msg{
+  width: 100%;
+	border-color: #ccc;
+  font-family: myFont;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+
 }
 
 .container_messages {
   border: 2px solid #dedede;
   background-color: #ffffff;
   border-radius: 5px;
-  padding: 5px;
+  padding: auto;
   margin: 10px 0;
   text-align: left;
 }
@@ -244,10 +264,15 @@ th {
 }
 
 .container_messages img {
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
   float: left;
   max-width: 60px;
+  padding: 0px;
   width: 100%;
   margin-right: 20px;
+  margin-bottom: 50px;
   border-radius: 50%;
 }
 
@@ -256,4 +281,3 @@ th {
   margin-left: 20px;
   margin-right:0;
 }
-
