@@ -1,17 +1,6 @@
-.ui-tooltip{
-  font-size: 10pt;
-  padding: 1px 1px;
-  /*max-width: 400px;*/
-  color: black;
-  font-family: myFont;
-  border-radius: 20px;
-  box-shadow: 0 0 7px black;
-}
-/*.ui-tooltip*/
-
 @font-face {
    font-family: myFont;
-   src: url(FredokaOne-Regular.ttf);
+   src: url(fonts/FredokaOne-Regular.ttf);
 }
 
 html {
@@ -23,6 +12,19 @@ html {
   box-sizing: border-box;
 }
 
+.selected{
+  background-color: #d0f0c0;
+}
+
+.ui-tooltip{
+  font-size: 10pt;
+  padding: 1px 1px;
+  max-width: 300px;
+  color: black;
+  font-family: myFont;
+  border-radius: 20px;
+  box-shadow: 0 0 7px black;
+}
 
 div {
   font-family: myFont;
@@ -32,6 +34,10 @@ div {
   text-align: center;
 }
 
+.warning{
+  color: red;
+  margin: auto;
+}
 
 #small_icon{
 	width: 4.5%;
@@ -123,7 +129,7 @@ input[type=submit]:hover {
 }
 
 #small_button{
-	margin-right: 180px;
+	margin-right: 220px;
 }
 
 #small_button_back{
@@ -137,6 +143,14 @@ input[type=submit]:hover {
 	margin-top: 0px;
   margin-bottom: 0px;
     float: left;
+}
+
+#join_button{
+  margin: 15px 200px;
+}
+
+#submit_button{
+  margin: auto;
 }
 
 .users-list {
@@ -176,7 +190,8 @@ table {
   border-collapse: collapse;
   width: 60%;
   position: relative;
-  left: 220px;
+  margin-left: 300px;
+  /*margin: auto;*/
 }
 
 th, td {
